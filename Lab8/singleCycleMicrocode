@@ -1,0 +1,35 @@
+# All values are in hex
+
+# I-type and J-type instructions.
+# left column is op code in hex
+00    0000	  # no-op
+08    0620	  # addi
+09    2620    # addiu
+0c    2600    # andi
+04    0062    # beq
+05    4060    # bne
+23    062C    # lw
+0f    0690    # lui
+0d    2610    # ori
+0a    0670    # slti
+0b    2670    # sltiu
+2b    0320    # sw
+0e    26A0    # xori
+02    0A00    # j
+03    0E00    # jal
+20    8000	  # Halt
+
+# R-type instructions.
+# left column is 0x40 + function code.
+40    0000	  # no-op (opcode and func code 0)
+60    0421	  # add (function code 20)
+61    0421    # addu (function code 21)
+64    0401    # and (function code 24)
+48    1A00    # jr (function code 08)
+67    04C1    # nor (function code 27)
+65    0411    # or (function code 25)
+6a    0471    # slt (function code 2a)
+6b    0471    # sltu (function code 2b)
+62    0461    # sub (function code 22)
+63    0461    # subu (function code 23)
+66    04A1    # xor (function code 26)
